@@ -13,7 +13,7 @@ txt_label.pack()
 random_number = random.randint(1,10)
 attempts = 0
 
-def check_guess(self):
+def check_guess(event=None):
     global attempts
     guess = entry.get()  
     guess_number = int(guess)
@@ -30,7 +30,8 @@ button_quit.pack()
 
 button = tk.Button(root, text="Guess", command=check_guess)
 button.pack()
-entry.bind("<Return>", check_guess)  
+
+entry.bind("<Return>", check_guess) 
 
 root.minsize(200, 40)
 
